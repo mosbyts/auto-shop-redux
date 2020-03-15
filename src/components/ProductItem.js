@@ -10,7 +10,7 @@ function ProductItem(props){
                 }
 
                 return(
-                    <div className='productItem'>
+                    <div className='productItem' key={item.name}>
                         <img src={item.img} alt={item.name} />
                         <div className='productDetails'>
                             <h3 className='name'>{item.name}</h3>
