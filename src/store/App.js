@@ -1,18 +1,23 @@
 //Necessary dependencies, data and components
-import React, { Component, Fragment } from 'react'
+import React from 'react'
+import { connect } from 'react-redux'
 import ProductItem from '../components/ProductItem'
-import { store } from './index'
 
 //Handles data display
-export default class App extends Component {
-  render(){
-    return (
-      <Fragment>
-        <ProductItem
-          products={store.getState().products}
-        />
-      </Fragment>
-    );
-  }
+function App(props) {
+  return (
+    <div>
+      {
+        props.products.map((item, index) => {
+          return <ProductItem item={item} key={item.name} />
+        })
+      }
+    </div>
+  )
 }
 
+const mapStateToProps = (state) => ({
+  products: state.products
+})
+
+export default connect(mapStateToProps, null)(App)
