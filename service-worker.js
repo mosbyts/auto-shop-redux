@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/auto-shop-redux/precache-manifest.3c256dff403dc46304bc4e785cf18155.js"
+  "/auto-shop-redux/public/precache-manifest.de6b25dac6fe68f82f2d81a6e7b7471c.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/auto-shop-redux/index.html", {
+workbox.routing.registerNavigationRoute("/auto-shop-redux/public/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
